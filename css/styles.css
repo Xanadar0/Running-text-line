@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hidden-heading {
+  display: none;
+}
+.marquee {
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 48px;
+  background-color: #bcdfd1;
+}
+
+.marquee__inner {
+  display: flex;
+}
+
+.marquee__line {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 10px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.marquee-list {
+  display: flex;
+  list-style: square;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.marquee-list li {
+  position: relative;
+  padding-left: 32px;
+  padding-right: 24px;
+}
+
+.marquee-list li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: green;
+  border-radius: 2px;
+}
+
+/* <------ Second line styles ------> */
+
+.incline {
+  transform: rotate(2deg);
+}
+.second-text-line {
+  background-color: #e4e5e6;
+}
+
+.second-text {
+  color: #00b068;
+}
+.second-text li::before {
+  background-color: #292929;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
