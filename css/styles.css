@@ -1,5 +1,3 @@
-@import url('./container.css');
-
 body {
   margin: 0;
 }
@@ -91,5 +89,40 @@ body {
 
   to {
     transform: translateX(-100%);
+  }
+}
+
+/* Mobile first */
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .section {
+    padding: 62px 0;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .section {
+    padding: 82px 0;
   }
 }
