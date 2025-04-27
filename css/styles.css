@@ -24,6 +24,8 @@ body {
 
 .marquee__inner {
   display: flex;
+  height: 128px;
+  align-items: center;
 }
 
 .marquee__line {
@@ -62,14 +64,16 @@ body {
   transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background-color: green;
+  background-color: #00b068;
   border-radius: 2px;
 }
 
 /* <------ Second line styles ------> */
 
 .incline {
+  position: relative;
   transform: rotate(2deg);
+  z-index: -1;
 }
 .second-text-line {
   background-color: #e4e5e6;
